@@ -11,11 +11,11 @@ namespace TwitterLite
     class Tweet
     {
     public:
-        Tweet(User* owner, std::string_view body);
-        std::string         getBody();
-        u_int32_t           getLikes();
-        const std::vector<User*>&  getRetweets();
-        const std::vector<Tweet*>& getReplies();
+        Tweet(User* owner, const std::string& body);
+        const std::string&         getBody();
+        u_int32_t                  getLikes();
+        const std::vector<User*>&  getRetweets() const;
+        const std::vector<Tweet*>& getReplies() const;
 
     private:
         User*               owner;
@@ -26,7 +26,7 @@ namespace TwitterLite
 
     };
 
-    inline std::string Tweet::getBody()
+    inline const std::string& Tweet::getBody()
     {
         return BODY;
     }
@@ -36,12 +36,12 @@ namespace TwitterLite
         return likes;
     }
 
-    inline const std::vector<User*>& Tweet::getRetweets()
+    inline const std::vector<User*>& Tweet::getRetweets() const
     {
         return retweets;
     }
 
-    inline const std::vector<Tweet*>& Tweet::getReplies()
+    inline const std::vector<Tweet*>& Tweet::getReplies() const
     {
         return replies;
     }

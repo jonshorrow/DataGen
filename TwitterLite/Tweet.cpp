@@ -7,7 +7,7 @@
 
 namespace TwitterLite
 {
-    Tweet::Tweet(User* owner, std::string_view body)
+    Tweet::Tweet(User* owner, const std::string& body)
     : owner(owner), BODY(body), likes(0), replies()
     {
         // Nothing
