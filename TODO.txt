@@ -1,0 +1,12 @@
+Everything (no really)
+
+In Tweet, Change pointers to a better pointer such as shared pointers so you don't worry as much about dereferencing garbage. 
+In Tweet, Change likes to vector of who liked it.
+
+In User, Implement Everything
+
+Make a psudo simple database class.
+    This will be a way to access all users and all tweets (could implement more but just for now, have it be super simple)
+
+Goal is to have independent users be able to follow other users and interact with tweets.
+
